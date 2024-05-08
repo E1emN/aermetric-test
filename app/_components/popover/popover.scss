@@ -1,0 +1,21 @@
+.popover {
+    position: relative;
+
+    &__window {
+        background: #fff;
+        box-shadow: 10px 10px 54px 1px rgba(0,0,0,0.75);
+        position: absolute;
+        right: 0;
+        top: 0px;
+        box-sizing: border-box;
+        padding: 12px;
+        border-radius: 12px;
+        width: 250px;
+        z-index: 2;
+
+        &_right {
+            left: 0;
+            right: unset;
+        }
+    }
+}

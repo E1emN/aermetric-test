@@ -1,0 +1,51 @@
+.employee {
+    background: #094074;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 12px;
+    position: relative;
+
+    &__select {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        cursor: pointer;
+    }
+
+    &__info {
+        display: flex;
+        gap: 15px;
+
+        &-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &-text {
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+}

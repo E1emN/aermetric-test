@@ -1,0 +1,22 @@
+.delete {
+    .popover__button {
+        background: #9e0627 !important;
+    }
+
+    &__window {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+            color: #000;
+            font-size: 12px;
+        }
+
+        &-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+    }
+}
