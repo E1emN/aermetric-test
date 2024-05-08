@@ -1,6 +1,7 @@
 .employee {
     background: #094074;
     color: #fff;
+    min-height: 240px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,6 +9,10 @@
     padding: 12px;
     border-radius: 12px;
     position: relative;
+
+    &_selected {
+        opacity: 0.8;
+    }
 
     &__select {
         position: absolute;
@@ -37,6 +42,8 @@
             font-size: 12px;
             display: flex;
             flex-direction: column;
+            word-wrap: break-word;
+            white-space: wrap;
         }
     }
 

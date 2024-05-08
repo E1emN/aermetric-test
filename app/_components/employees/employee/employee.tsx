@@ -2,10 +2,24 @@ import Image from "next/image"
 import "./employee.scss"
 import { Edit } from "./edit/edit"
 import { Delete } from "./delete/delete"
+import { Employee as EmployeeType } from "@/app/_store/employees/api"
+import { useAppDispatch, useAppSelector } from "@/app/_hooks/reduxHooks"
+import { addSelectedEmployeeId, removeSelectedEmployeeId } from "@/app/_store/employees/slice"
 
-export const Employee = () => {
+export const Employee: React.FC<EmployeeType> = (props) => {
+
+    const selectedIds = useAppSelector(state => state.employees.selectedIds)
+    const dispatch = useAppDispatch()
+    const isSelected = selectedIds.includes(props.id)
+
     return(
-        <div className="employee">
+        <div className={`employee ${isSelected ? 'employee_selected' : ''}`}>
+            <input 
+                className="employee__select" 
+                type="checkbox"
+                checked={isSelected}
+                onChange={e => e.target.checked ? dispatch(addSelectedEmployeeId(props.id)) : dispatch(removeSelectedEmployeeId(props.id))}
+            />
             <div className="employee__info">
                 <Image
                     src="/avatar.gif"
@@ -15,17 +29,16 @@ export const Employee = () => {
                     className="employee__info-avatar"
                 />
                 <div className="employee__info-block">
-                    <span className="employee__info-text"><strong>Name:</strong> Johnson Argen</span>
-                    <span className="employee__info-text"><strong>Email:</strong> johnson@ke</span>
-                    <span className="employee__info-text"><strong>Age:</strong> 22</span>
-                    <span className="employee__info-text"><strong>Position:</strong> Kekoev</span>
-                    <span className="employee__info-text"><strong>Department:</strong> Kekoev</span>
+                    <span className="employee__info-text"><strong>Name:</strong> {props.name}</span>
+                    <span className="employee__info-text"><strong>Email:</strong> {props.email}</span>
+                    <span className="employee__info-text"><strong>Age:</strong> {props.age}</span>
+                    <span className="employee__info-text"><strong>Position:</strong> {props.position}</span>
+                    <span className="employee__info-text"><strong>Department:</strong> {props.department}</span>
                 </div>
             </div>
-            <input className="employee__select" type="checkbox" />
             <div className="employee__actions">
-                <Edit />
-                <Delete />
+                <Edit {...props} />
+                <Delete id={props.id} />
             </div>
         </div>
     )

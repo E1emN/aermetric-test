@@ -1,20 +1,32 @@
+"use client"
 import "./employees.scss"
 import { Employee } from "./employee/employee"
 import { Filter } from "./filter/filter"
 import { AddNew } from "./addNew/addNew"
+import { useGetAllEmployeesQuery } from "@/app/_store/employees/api"
+import { useAppSelector } from "@/app/_hooks/reduxHooks"
+import { DeleteSelected } from "./deleteSelected/deleteSelected"
 
 export const Employees = () => {
+
+    const employeesQueries = useAppSelector(state => state.employees.employeesQueries)
+    const { currentData } = useGetAllEmployeesQuery(employeesQueries)
+    
     return(
         <div className="employees">
             <div className="employees__actions">
                 <Filter />
                 <AddNew />
-                <button className="employees__actions-delete button">Delete selected</button>
+                <DeleteSelected />
             </div>
             <h3 className="employees__title">Emloyees</h3>
             <ul className="employees__list">
                 {
-                    [1,2,3,4,5,6,7,8].map(a => <li className="employees__list-li" key={a}><Employee /></li>)
+                    currentData?.map(emp => 
+                        <li className="employees__list-li" key={emp.id}>
+                            <Employee {...emp} />
+                        </li>
+                    )
                 }
             </ul>
         </div>

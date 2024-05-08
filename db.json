@@ -1,0 +1,108 @@
+{
+  "employees": [
+    {
+      "name": "Campos Conway",
+      "email": "camposconway@manglo.com",
+      "age": 23,
+      "position": "Developer",
+      "department": "Development",
+      "id": "663b692d8fc54791eeda0935"
+    },
+    {
+      "id": "663b692de787124f3d5dd434",
+      "name": "Cathleen Trevino",
+      "email": "cathleentrevino@manglo.com",
+      "age": 20,
+      "position": "System Administrator",
+      "department": "Development"
+    },
+    {
+      "id": "663b692d1a3d713db8e7d54c",
+      "name": "Esmeralda Harrison",
+      "email": "esmeraldaharrison@manglo.com",
+      "age": 37,
+      "position": "QA Engineer",
+      "department": "Design"
+    },
+    {
+      "id": "663b692d8de63459daa133ec",
+      "name": "Gilbert Hendricks",
+      "email": "gilberthendricks@manglo.com",
+      "age": 37,
+      "position": "Designer",
+      "department": "Operations"
+    },
+    {
+      "id": "663b692d22cfe75168eab61a",
+      "name": "Acosta Small",
+      "email": "acostasmall@manglo.com",
+      "age": 40,
+      "position": "Designer",
+      "department": "Project Management"
+    },
+    {
+      "id": "663b692d7dbf4c223247a842",
+      "name": "Vera Gomez",
+      "email": "veragomez@manglo.com",
+      "age": 35,
+      "position": "System Administrator",
+      "department": "QA"
+    },
+    {
+      "id": "663b692d9a67b15a06ce44df",
+      "name": "Linda Cobb",
+      "email": "lindacobb@manglo.com",
+      "age": 35,
+      "position": "Developer",
+      "department": "Operations"
+    },
+    {
+      "id": "663b692dcbde5b2f05cde09c",
+      "name": "Perry Roberson",
+      "email": "perryroberson@manglo.com",
+      "age": 40,
+      "position": "Developer",
+      "department": "Design"
+    },
+    {
+      "id": "663b692d82a70d4883a27a8d",
+      "name": "Christian Horne",
+      "email": "christianhorne@manglo.com",
+      "age": 36,
+      "position": "Project Manager",
+      "department": "IT"
+    },
+    {
+      "id": "663b692dd1ae1298ddd6ee13",
+      "name": "Janell Stein",
+      "email": "janellstein@manglo.com",
+      "age": 39,
+      "position": "Designer",
+      "department": "QA"
+    },
+    {
+      "id": "663b692d6cc791885960e0ef",
+      "name": "Curtis Blankenship",
+      "email": "curtisblankenship@manglo.com",
+      "age": 32,
+      "position": "Developer",
+      "department": "Project Management"
+    },
+    {
+      "id": "663b692dd134861407feb835",
+      "name": "Wolf Winters",
+      "email": "wolfwinters@manglo.com",
+      "age": 40,
+      "position": "System Administrator",
+      "department": "Design"
+    },
+    {
+      "id": "663b692d237e894f7f4396da",
+      "name": "Juarez Grant",
+      "email": "juarezgrant@manglo.com",
+      "age": 33,
+      "position": "Project Manager",
+      "department": "IT"
+    }
+  ]
+}

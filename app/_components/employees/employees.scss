@@ -27,7 +27,7 @@
     }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1280px) {
     .employees {
         &__list {
             grid-template-columns: 1fr 1fr 1fr;
@@ -35,7 +35,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 970px) {
     .employees {
         &__list {
             grid-template-columns: 1fr 1fr;
@@ -43,7 +43,7 @@
     }
 }
 
-@media (max-width: 565px) {
+@media (max-width: 665px) {
     .employees {
         &__list {
             grid-template-columns: 1fr;

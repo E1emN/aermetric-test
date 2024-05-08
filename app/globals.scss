@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +7,7 @@ body {
 
 .container {
   width: calc(100vw - 32px);
+  min-height: calc(100vh - 203px);
 }
 
 .button {
@@ -32,6 +32,8 @@ body {
   border-radius: 4px;
   border: 1px solid #094074;
   color: #094074;
+  background: #fff;
+  outline: none;
 }
 
 .form {
