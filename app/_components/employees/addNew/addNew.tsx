@@ -26,6 +26,7 @@ export const AddNew = () => {
     return (
         <Popover
             buttonName="Add new"
+            data-testid="add-employee"
             renderBody={(close) => {
                 return (
                     <form className="form" onSubmit={e => { formik.handleSubmit(e); close() }}>
@@ -37,6 +38,7 @@ export const AddNew = () => {
                                 name="name"
                                 value={formik.values.name}
                                 onChange={formik.handleChange}
+                                data-testid="add-employee-name"
                                 required
                              />
                         </label>
@@ -49,6 +51,7 @@ export const AddNew = () => {
                                 name="email"
                                 value={formik.values.email}
                                 onChange={formik.handleChange}
+                                data-testid="add-employee-email"
                                 required
                              />
                         </label>
@@ -60,6 +63,7 @@ export const AddNew = () => {
                                 name="age"
                                 value={formik.values.age}
                                 onChange={formik.handleChange}
+                                data-testid="add-employee-age"
                                 required
                              />
                         </label>
@@ -88,7 +92,13 @@ export const AddNew = () => {
                                 {DEPARTMENTS.map(p => <option key={p} value={p}>{p}</option>)}
                             </select>
                         </label>
-                        <button className="button" type="submit">Add</button>
+                        <button 
+                            className="button" 
+                            type="submit"
+                            data-testid="add-employee-submit"
+                        >
+                            Add
+                        </button>
                     </form>
                 )
             }}

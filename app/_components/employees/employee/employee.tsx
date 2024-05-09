@@ -13,7 +13,10 @@ export const Employee: React.FC<EmployeeType> = (props) => {
     const isSelected = selectedIds.includes(props.id)
 
     return(
-        <div className={`employee ${isSelected ? 'employee_selected' : ''}`}>
+        <div 
+            className={`employee ${isSelected ? 'employee_selected' : ''}`} 
+            data-testid="employee"
+        >
             <input 
                 className="employee__select" 
                 type="checkbox"

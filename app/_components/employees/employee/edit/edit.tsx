@@ -26,6 +26,7 @@ export const Edit: React.FC<Employee> = ({ id, name, email, age, position, depar
         <Popover
             buttonName="Edit"
             bodySide="right"
+            data-testid="edit-employee"
             renderBody={(close) => {
                 return (
                     <form className="form" onSubmit={e => { formik.handleSubmit(e); close() }}>
@@ -37,6 +38,7 @@ export const Edit: React.FC<Employee> = ({ id, name, email, age, position, depar
                                 name="name"
                                 value={formik.values.name}
                                 onChange={formik.handleChange}
+                                data-testid="edit-employee-name"
                                 required
                              />
                         </label>
@@ -88,7 +90,13 @@ export const Edit: React.FC<Employee> = ({ id, name, email, age, position, depar
                                 {DEPARTMENTS.map(p => <option key={p} value={p}>{p}</option>)}
                             </select>
                         </label>
-                        <button className="button" type="submit">Add</button>
+                        <button 
+                            className="button" 
+                            type="submit"
+                            data-testid="edit-employee-submit"
+                        >
+                            Add
+                        </button>
                     </form>
                 )
             }}

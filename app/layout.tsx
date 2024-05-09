@@ -5,7 +5,7 @@ import { Header } from "./_components/header/header";
 import StoreProvider from "./_store/storeProvider";
 import { Footer } from "./_components/footer/footer";
 
-const roboto = Roboto({ weight: ["400"] });
+const roboto = Roboto({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Aermetric test"
